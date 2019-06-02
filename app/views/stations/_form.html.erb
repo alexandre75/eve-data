@@ -1,0 +1,13 @@
+<%= form_with(model: [@region, @region.stations.build], local: true) do |form| %>
+<p>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :eveid %>
+  <%= form.text_field :eveid %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>

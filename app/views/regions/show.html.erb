@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @region.name %>
+</p>
+ 
+<p>
+  <strong>Eve Id:</strong>
+  <%= @region.eve_id %>
+</p>
+
+<h2>Stations</h2>
+<%= render @region.stations %>
+
+<h2>Add a Station</h2>
+<%= render 'stations/form' %>
+
+<%= link_to 'Back', regions_path %>

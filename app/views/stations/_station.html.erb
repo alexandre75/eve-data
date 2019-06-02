@@ -1,0 +1,7 @@
+<p>
+  <strong><%= station.name %></strong>
+  (<%= station.eveid %>)
+  <%= link_to 'Delete', [station.region, station],
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+</p>

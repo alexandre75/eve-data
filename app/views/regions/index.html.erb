@@ -1,0 +1,21 @@
+<h1>Regions</h1>
+<%= link_to 'New region', new_region_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Id</th>
+    <th/>
+    <th/>
+  </tr>
+  
+  <% @regions.each do |region| %>
+  <tr>
+    <td><%= region.name %></td>
+    <td><%= region.eve_id %></td>
+    <td><%= link_to 'Show', region_path(region) %><td>
+    <td><%= link_to 'Delete', region_path(region),
+	    method: :delete,
+	    data: {confirm: 'Are you sure?'} %></td>
+  <tr>
+    <% end %>
+</table>
