@@ -1,4 +1,4 @@
-require 'orders.rb'
+require 'eve_data.rb'
 
 class TradersController < ApplicationController
 
