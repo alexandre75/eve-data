@@ -7,7 +7,3 @@ class Region < ApplicationRecord
             }
   has_many :stations
 end
-
-
-require 'forwardable'
-require 'json'
