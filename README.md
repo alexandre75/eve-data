@@ -1,24 +1,6 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+H1. Eve-data EDS
+This component act as a fronter infront Eve Esi and provide a summary on markets.
+Other than allowing me to play with Rails, its main objectives :
+* Caching whatever the status of the components thanks to Squid
+* Extract statistics from the mass of orders
