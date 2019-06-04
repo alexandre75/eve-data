@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'histories/index'
+  get 'histories/get'
   get 'traders/index'
   get 'trades/index'
   get 'welcome/index'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
     resources :stations do
       resources :books
     end
+    resources :histories
   end
   resources :traders
   root 'welcome#index'

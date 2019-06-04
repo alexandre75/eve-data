@@ -6,4 +6,5 @@ class Region < ApplicationRecord
               end
             }
   has_many :stations
+  has_many :histories
 end

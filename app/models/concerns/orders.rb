@@ -1,15 +1,3 @@
-module EveData
-  
-  def self.build_market_summary(parameters)
-    Rails.logger.info("Fetching orders for region #{parameters.to_s}")
-    parameters[:connection] = Faraday.new('https://esi.evetech.net/latest')
-    orders = Orders.new (parameters)
-    summaries = Summaries.new
-    summaries.process(orders)
-    summaries.to_a
-  end
-end
-
 
 class Orders
   attr_reader :region_id, :station_id, :conn
@@ -38,7 +26,7 @@ class Orders
         page += 1
         attempt = 1
       else
-        break if attempt == 3
+        raise FailedDependencyError if attempt == 3
         Rails.logger.warn(conn.to_s)
         Rails.logger.warn(response.body)
         attempt += 1

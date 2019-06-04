@@ -1,9 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+domain:
   name: Domain
-  eve_id: 
+  eve_id: 10000010 
 
 two:
   name: Esoteria
   eve_id: 1
+
+metropolis:
+  name: Metropolis
+  eve_id: 10000042
+  

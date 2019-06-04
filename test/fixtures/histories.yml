@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  median: 1564
+  quantity: 11
+  item: 1
+  region: domain
+
+two:
+  median: 1
+  quantity: 1
+  item: 1
+  region: two
