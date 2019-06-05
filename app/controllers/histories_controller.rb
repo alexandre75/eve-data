@@ -1,4 +1,3 @@
-require 'eve_data.rb'
 
 class HistoriesController < ApplicationController
   include EveData
@@ -7,12 +6,13 @@ class HistoriesController < ApplicationController
   end
   
   def show
-    @hist = EveData.region_history(history_params)
+    @region = Region.find_by(eve_id: params[:region_id])
+    @history = HistoryService.region_history(history_params)
     expires_in 1.days, public: true
-    render json: @hist, status: :ok
+    render json: @history, status: :ok
   end
 
   def history_params
-    { region_id: params[:region_id], item: params[:id] }
+    { region_id: @region.id, item: params[:id] }
   end
 end
