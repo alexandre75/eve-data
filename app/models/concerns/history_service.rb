@@ -14,13 +14,16 @@ module HistoryService
     if hist && (hist.updated_at <=> threshold) == 1
       return hist
     else
-      markets_history = EveData.markets_history(eve_params(params))
-      history = History.of(params, markets_history)
-      history.save!
-      return history
+      fetch_and_save(params)
     end
   end
 
+  def self.fetch_and_save(params)
+    markets_history = EveData.markets_history(eve_params(params))
+    history = History.of(params, markets_history)
+    history.save
+  end
+   
   def self.eve_params(params)
     { region_id: @region.eve_id, type_id: params[:item] }
   end
