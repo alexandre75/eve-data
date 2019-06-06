@@ -22,6 +22,7 @@ module HistoryService
     markets_history = EveData.markets_history(eve_params(params))
     history = History.of(params, markets_history)
     history.save
+    return history
   end
    
   def self.eve_params(params)

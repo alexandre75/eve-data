@@ -1,0 +1,106 @@
+[
+  {
+    "average": 250000000,
+    "date": "2018-05-02",
+    "highest": 250000000,
+    "lowest": 250000000,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 259999998.99,
+    "date": "2018-07-22",
+    "highest": 259999998.99,
+    "lowest": 259999998.99,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 212899997,
+    "date": "2018-09-08",
+    "highest": 212899997,
+    "lowest": 212899997,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 212899998,
+    "date": "2018-10-04",
+    "highest": 212899998,
+    "lowest": 212899998,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 212899998,
+    "date": "2018-10-06",
+    "highest": 212899998,
+    "lowest": 212899998,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 212899998,
+    "date": "2018-10-12",
+    "highest": 212899998,
+    "lowest": 212899998,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 199000000,
+    "date": "2018-12-15",
+    "highest": 199000000,
+    "lowest": 199000000,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 250000000,
+    "date": "2018-12-29",
+    "highest": 250000000,
+    "lowest": 250000000,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 250000000,
+    "date": "2019-01-11",
+    "highest": 250000000,
+    "lowest": 250000000,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 250000000,
+    "date": "2019-01-13",
+    "highest": 250000000,
+    "lowest": 250000000,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 244444444,
+    "date": "2019-01-28",
+    "highest": 244444444,
+    "lowest": 244444444,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 160666666,
+    "date": "2019-04-05",
+    "highest": 160666666,
+    "lowest": 160666666,
+    "order_count": 1,
+    "volume": 1
+  },
+  {
+    "average": 168699999,
+    "date": "2019-04-29",
+    "highest": 168699999,
+    "lowest": 168699999,
+    "order_count": 1,
+    "volume": 1
+  }
+]

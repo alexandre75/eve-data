@@ -13,7 +13,7 @@ module EveData
   
   def self.create_hist(hist)
     OpenStruct.new(average: hist["average"],
-                   date: hist["date"],
+                   date: Date.parse(hist["date"]),
                    highest: hist["highest"],
                    lowest: hist["lowest"],
                    order_count: hist["order_count"],
