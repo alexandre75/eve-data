@@ -21,4 +21,14 @@ class HistoryTest < ActiveSupport::TestCase
     assert_in_delta(6.45E-2, history[:quantity], 1E-4)
     assert_in_delta(1.64E8, history[:median], 1E6)
   end
+
+  test "of history 1231" do
+    history_json = JSON.parse(File.read('test/models/history1231.json'))
+    eve_history = history_json.map { |o| EveData.create_hist(o) }
+
+    history = History.of({}, eve_history)
+
+    assert_in_delta(5.37E3, history[:quantity], 10)
+    assert_in_delta(0, history[:median], 1E-3)
+  end
 end
