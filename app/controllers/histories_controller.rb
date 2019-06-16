@@ -10,6 +10,8 @@ class HistoriesController < ApplicationController
     @history = HistoryService.region_history(history_params)
     expires_in 1.days, public: true
     render json: @history, status: :ok
+  rescue NotFoundError => e
+    render json: {error: e.message}, status: :not_found
   end
 
   def history_params

@@ -25,4 +25,9 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
     assert(json["quantity"])
     assert(json["median"])
   end
+
+  test "should return 404" do
+    get "/regions/10000042/histories/45736"
+    assert_response :missing
+  end
 end

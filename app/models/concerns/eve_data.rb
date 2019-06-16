@@ -7,7 +7,7 @@ module EveData
       JSON.parse(response.body).map {|hist| create_hist(hist) }.to_a
     else
       Rails.logger.error("https://esi.evetech.net/latest/markets/" + response.status.to_s + "/" + response.body)
-      raise "Eve server does not have the resource : " + params.to_s
+      raise NotFoundError.new("Eve server does not have the resource : " + params.to_s)
     end
   end
   
@@ -28,4 +28,8 @@ module EveData
     summaries.process(orders)
     summaries.to_a
   end
+end
+
+class NotFoundError < StandardError
+
 end
