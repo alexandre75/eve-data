@@ -4,7 +4,7 @@ class Orders
   def initialize(params)
     @region_id = params[:region_id]
     raise ArgumentError, "region_id missing" unless @region_id
-    @station_id = params[:station_id]
+    @station_id = params[:station_id].to_i if params[:station_id]
     @conn = params[:connection]
     raise "AssertionError" unless @conn
   end   
