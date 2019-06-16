@@ -31,4 +31,14 @@ class HistoryTest < ActiveSupport::TestCase
     assert_in_delta(5.37E3, history[:quantity], 10)
     assert_in_delta(0, history[:median], 1E-3)
   end
+
+  test "should return 0 quantity when no orders" do
+    history_json = JSON.parse(File.read('test/models/history_empty.json'))
+    eve_history = history_json.map { |o| EveData.create_hist(o) }
+    
+    history = History.of({}, eve_history)
+    
+    assert_equal(0, history[:quantity])
+  end
 end
+
