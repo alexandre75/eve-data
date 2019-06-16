@@ -9,7 +9,7 @@ class History < ApplicationRecord
   
   def self.of(history_params, eve_history)
     if eve_history.empty?
-      return self.new :quantity => 0, :median => 0 
+      return self.new( { :quantity => 0, :median => 0 }.merge(history_params) )
     else
       date_range = one_month(eve_history)
       LOGGER.debug("date_range : " + date_range.to_s)
