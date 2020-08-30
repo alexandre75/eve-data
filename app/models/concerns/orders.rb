@@ -15,8 +15,8 @@ class Orders
     #conn.token_auth('')
     loop do
       Rails.logger.debug("requesting page : #{page}")
-      
-      response = conn.get "markets/#{region_id}/orders/", {page: page.to_s, order_type: "sell"}      
+      Rails.logger.debug("Path " + orders_path.to_s)
+      response = conn.get orders_path, {page: page.to_s, order_type: "sell"}      
       if response.success? then
         orders = JSON.parse(response.body)
         break if orders.empty?
@@ -31,6 +31,14 @@ class Orders
         Rails.logger.warn(response.body)
         attempt += 1
       end
+    end
+  end
+
+  def orders_path
+    if region_id == "10000039"
+      "markets/structures/1024004680659/"
+    else
+      "markets/#{region_id}/orders/"
     end
   end
 end

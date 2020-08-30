@@ -52,4 +52,14 @@ class OrdersTest < MiniTest::Unit::TestCase
 
     assert_equal(0, result.size)
   end
+
+  def test_orders_path_with_structure
+    orders = Orders.new ({ region_id: "10000039", connection: HttpDouble.new({})})
+    assert_equal("markets/structures/1024004680659/", orders.orders_path)
+  end
+
+  def test_orders_path_with_pub_stationc
+    orders = Orders.new ({ region_id: 1, connection: HttpDouble.new({})})
+    assert_equal("markets/1/orders/", orders.orders_path)
+  end
 end
