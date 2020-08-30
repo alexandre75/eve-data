@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_074600) do
+ActiveRecord::Schema.define(version: 2020_07_10_082843) do
 
   create_table "histories", force: :cascade do |t|
     t.float "median"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_074600) do
     t.integer "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "order_count"
     t.index ["item"], name: "index_histories_on_item"
     t.index ["region_id"], name: "index_histories_on_region_id"
   end

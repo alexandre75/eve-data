@@ -20,7 +20,7 @@ module HistoryService
 
   def self.fetch_and_save(params)
     markets_history = EveData.markets_history(eve_params(params))
-    history = History.of(params, markets_history)
+    history = History.of(params, markets_history, Date.today)
     history.save
     return history
   end
