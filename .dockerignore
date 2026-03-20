@@ -1,0 +1,11 @@
+.git
+vendor
+log
+tmp
+storage
+public/assets
+*.sqlite3
+
+# Preserve the lockfile we use during image build.
+
+

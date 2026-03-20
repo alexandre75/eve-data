@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    environment:
+      RAILS_ENV: production
+      PORT: 3000
+      RAILS_SERVE_STATIC_FILES: "true"
+      DB_HOST: pcdelphine
+      DB_USER: evedata
+      DB_PASSWORD: evedata
+    ports:
+      - "3000:3000"
+    depends_on:
+      - pcdelphine
+    restart: unless-stopped
+
+  pcdelphine:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: evedata
+      MYSQL_USER: evedata
+      MYSQL_PASSWORD: evedata
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+
