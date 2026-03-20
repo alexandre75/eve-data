@@ -7,6 +7,7 @@ class HistoriesController < ApplicationController
   
   def show
     @region = Region.find_by(eve_id: params[:region_id])
+    raise NotFoundError, "Region #{params[:region_id]} not found" if @region.nil?
     @history = HistoryService.region_history(history_params)
     expires_in 1.days, public: true
     render json: @history, status: :ok
